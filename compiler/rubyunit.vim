@@ -18,14 +18,7 @@ set cpo-=C
 
 CompilerSet makeprg=testrb
 
-CompilerSet errorformat=\%W\ %\\+%\\d%\\+)\ Failure:,
-			\%C%m\ [%f:%l]:,
-			\%E\ %\\+%\\d%\\+)\ Error:,
-			\%C%m:,
-			\%C\ \ \ \ %f:%l:%.%#,
-			\%C%m,
-			\%Z\ %#,
-			\%-G%.%#
+runtime! compiler/ruby-errorformat.vim
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
